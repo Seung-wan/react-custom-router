@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Four from './components/Four';
+import Header from './components/Header';
+import One from './components/One';
+import Route from './components/Routes/Route';
+import Three from './components/Three';
+import Two from './components/Two';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Route path="/one">
+        <One />
+      </Route>
+      <Route path="/two">
+        <Two />
+      </Route>
+      <Route path="/three">
+        <Three />
+      </Route>
+      <Route path="/four">
+        <Four />
+      </Route>
     </div>
   );
 }
